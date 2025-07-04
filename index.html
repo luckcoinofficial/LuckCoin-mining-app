@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Luck Coin</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+  <h1>Luck Coin Mining App</h1>
+
+  <button onclick="signIn()">Login with Google</button>
+
+  <div id="dashboard" style="display:none;">
+    <p id="welcome"></p>
+    <p>Mining Rate: <span id="rate">0.008</span> / hr</p>
+    <p>Balance: <span id="balance">0</span> Luck</p>
+
+    <button onclick="mine()">Mine</button>
+
+    <p>Next Mine in: <span id="timer">Ready</span></p>
+    <p>Referral Link: <span id="refLink"></span></p>
+  </div>
+
+  <!-- Your Scripts -->
+  <script src="firebase.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
